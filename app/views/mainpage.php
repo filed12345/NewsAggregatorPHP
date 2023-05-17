@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<?php require '../app/views/header.php'; ?>
 <head>
+    <?php require '../app/views/header.php'; ?>
     <title>Main Page</title>
     <link rel="stylesheet" type="text/css" href="/NewsWebSitePhp/public/css/mainpage.css">
 </head>
