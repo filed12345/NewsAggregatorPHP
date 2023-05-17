@@ -1,0 +1,102 @@
+/* edit.css */
+
+.delete-comment-btn {
+    padding: 3px 6px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* добавлено для оптимального размера */
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin-right: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.content-wrap {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding:
+            20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.container {
+    width: 100%;
+}
+
+h2.title {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+form img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.update-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #009879;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 20px;
+}

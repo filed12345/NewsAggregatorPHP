@@ -1,0 +1,26 @@
+# Включаем перезапись URL (mod_rewrite)
+RewriteEngine On
+
+# Запрет доступа к директории app
+RewriteRule ^app/ - [F,L]
+# Запрет доступа к директории vendor
+RewriteRule ^vendor/ - [F,L]
+# Запрет доступа к файлам композера
+RewriteRule ^composer\.json$ - [F,L]
+RewriteRule ^composer\.lock$ - [F,L]
+RewriteRule ^composer\.phar$ - [F,L]
+
+
+
+# Перенаправляем все запросы на public/index.php, за исключением фактически существующих файлов и директорий
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php/$1 [QSA,L]
+
+
+
+
+#Таким образом, доступ к файлам в директории app будет закрыт, и
+#все запросы будут обрабатываться через public/index.php.
+#Это позволяет обеспечить безопасность моего приложения,
+#скрывая внутренние файлы и папки от прямого доступа через веб-браузер.

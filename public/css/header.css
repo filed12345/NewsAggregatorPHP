@@ -1,0 +1,106 @@
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: Arial, sans-serif;*/
+/*    background-color: #f4f4f4;*/
+/*    overflow-x: hidden; !* Скрытие горизонтального скролла *!*/
+/*}*/
+
+/*.header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 20px 30px;*/
+/*    background-color: #333;*/
+/*    color: #fff;*/
+/*    margin-top: 0;*/
+/*    box-sizing: border-box; !* Включение padding в общую ширину элемента *!*/
+/*}*/
+
+/*.header__title {*/
+/*    margin: 0; !* Устанавливает отступы по умолчанию для заголовка *!*/
+/*    font-size: 24px; !* Устанавливает размер шрифта для заголовка *!*/
+/*}*/
+
+/*.header__user-info {*/
+/*    display: flex; !* Устанавливает элементы информации о пользователе в виде гибкого контейнера *!*/
+/*    align-items: center; !* Выравнивает элементы информации о пользователе по вертикали *!*/
+/*}*/
+
+/*.header__username {*/
+/*    margin-right: 20px; !* Устанавливает правый отступ для имени пользователя *!*/
+/*}*/
+
+/*.header__logout {*/
+/*    color: #fff; !* Устанавливает цвет текста для ссылки выхода *!*/
+/*    text-decoration: none; !* Убирает подчеркивание ссылки *!*/
+/*}*/
+
+/*.header__logout:hover {*/
+/*    text-decoration: underline; !* Добавляет подчеркивание при наведении на ссылку выхода *!*/
+/*}*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header__user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header__username {
+    margin-right: 20px;
+}
+
+.header__logout {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__logout:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header__title {
+        margin-bottom: 10px;
+    }
+
+    .header__user-info {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__username {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
