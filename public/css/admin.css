@@ -85,38 +85,56 @@ html, body {
 }
 
 /* Стили для модального окна и маски */
+
 .modal-mask {
-    position: fixed; /* Позиционируем маску во всем окне */
-    z-index: 9998; /* Устанавливаем z-index выше основного контента */
-    top: 0; /* Располагаем маску сверху */
-    left: 0; /* Располагаем маску слева */
-    width: 100%; /* Маска занимает всю ширину */
-    height: 100%; /* Маска занимает всю высоту */
-    background-color: rgba(0, 0, 0, .5); /* Полупрозрачный черный цвет фона */
-    display: flex; /* Используем flex для центрирования модального окна */
-    justify-content: center; /* Центрируем модальное окно по горизонтали */
-    align-items: center; /* Центрируем модальное окно по вертикали */
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-wrapper {
-    width: 80%; /* Ширина модального окна составляет 80% от ширины окна */
-    background-color: #fff; /* Белый фон модального окна */
-    padding: 20px; /* Отступы внутри модального окна */
-    border-radius: 5px; /* Скругление углов модального окна */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33); /* Тень модального окна */
-    z-index: 9999; /* z-index модального окна выше, чем у маски */
-    overflow: auto; /* Если контент модального окна больше, чем его размер, появится прокрутка */
+    width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Arial, sans-serif;
 }
 
-/* Стили для кнопок в модальном окне */
-.modal-default-button {
-    float: right; /* Выравниваем кнопку по правому краю */
+.modal-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
-.modal-cancel-button {
-    color: #333; /* Цвет текста кнопки "Отмена" */
-    margin-right: 10px; /* Отступ справа для кнопки "Отмена" */
+.modal-content h2 {
+    margin-bottom: 20px;
 }
 
+.modal-content form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-content form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #009879;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content form button:hover {
+    background-color: #0056b3;
+}
 
 
