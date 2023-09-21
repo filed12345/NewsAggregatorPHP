@@ -18,7 +18,7 @@
 
         <div>
             <label for="content">Content</label>
-            <textarea id="content" name="content" required></textarea>
+            <textarea id="content" name="content" cols="100" required></textarea>
         </div>
 
         <div>

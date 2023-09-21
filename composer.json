@@ -1,6 +1,14 @@
 {
   "require": {
     "ext-pdo": "*",
-    "ext-fileinfo": "*"
+    "ext-fileinfo": "*",
+    "fabpot/goutte": "^4.0",
+    "react/http": "^1.9",
+    "monolog/monolog": "^3.4",
+    "symfony/browser-kit": "^6.3",
+    "react/event-loop": "^1.4",
+    "react/promise": "^3.0",
+    "amphp/parallel": "^2.2",
+    "amphp/amp": "^3.0"
   }
 }

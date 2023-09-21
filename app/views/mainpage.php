@@ -17,7 +17,13 @@
             <img class="news-image" src="/NewsWebSitePhp/public/uploads/<?= $newsItem['media'] ?>" alt="<?= "News Image" ?>">
         <?php endif; ?>
         <!-- Отображение имени автора -->
-        <p>Author: <?= $newsItem['author_name']; ?></p>
+        <p>
+            <?php if ($newsItem['is_parsed']): ?>
+                Source: <a href="<?= $newsItem['source_url']; ?>"><?= $newsItem['source_url']; ?></a>
+            <?php else: ?>
+                Author: <?= $newsItem['author_name']; ?>
+            <?php endif; ?>
+        </p>
         <p><?= $newsItem['body']; ?></p>
         <p>Published at: <?= $newsItem['published_at']; ?></p>
 

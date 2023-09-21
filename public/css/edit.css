@@ -1,30 +1,10 @@
 /* edit.css */
 
-.delete-comment-btn {
-    padding: 3px 6px;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px; /* добавлено для оптимального размера */
-}
-
-.comment {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.comment p {
-    margin-right: 10px;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #9AACA4;
     color: #333;
 }
 
@@ -36,13 +16,19 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+
 .content-wrap {
     width: 100%;
     max-width: 800px;
     background-color: #ffffff;
-    padding:
-            20px;
+    padding: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.content-wrap:hover {
+    transform: scale(1.01);
 }
 
 .container {
@@ -51,6 +37,9 @@ body {
 
 h2.title {
     margin-bottom: 20px;
+    color: #0E3B43;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 form {
@@ -60,16 +49,36 @@ form {
 form label {
     display: block;
     margin-bottom: 5px;
+    color: #0E3B43;
 }
 
-form input[type="text"],
-form textarea {
-    width: 100%;
+form input[type="text"] {
+    width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
     margin-bottom: 20px;
     font-size: 16px;
+    transition: box-shadow 0.3s;
+}
+
+form input[type="text"]:focus {
+    box-shadow: 0 0 5px #EF476F;
+}
+
+form textarea {
+    width: calc(100% - 22px);
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: box-shadow 0.3s;
+}
+
+form textarea:focus {
+    box-shadow: 0 0 5px #EF476F;
 }
 
 form input[type="file"] {
@@ -77,23 +86,51 @@ form input[type="file"] {
 }
 
 form img {
-    width: 100px;
+    width: 450px; /* Increased image size */
     height: auto;
     margin-bottom: 20px;
+}
+
+/* Styles for comments section */
+.comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.comment p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.delete-comment-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EF476F;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.delete-comment-btn:hover {
+    background-color: #D43F61;
 }
 
 .update-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #009879;
+    border-radius: 5px;
+    background-color: #EF476F;
     color: #ffffff;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .update-btn:hover {
-    background-color: #0056b3;
+    background-color: #D43F61;
+    transform: scale(1.05);
 }
 
 .error-message {
@@ -115,22 +152,24 @@ form img {
 }
 
 .modal-wrapper {
-    width: 600px;
+    width: 80%; /* Увеличена ширина модального окна до 80% от ширины экрана */
+    max-width: 600px; /* Ограничена максимальная ширина модального окна */
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-    transition: all .3s ease;
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Тень вокруг блока */
+    transition: all .3s ease; /* Плавный переход при наведении */
     font-family: Arial, sans-serif;
-}
-
-.modal-content {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Добавлен отступ внутри модального окна */
 }
 
 .modal-content h2 {
     margin-bottom: 20px;
+    color: #0E3B43; /* Темно-зеленый цвет текста */
+    text-transform: uppercase; /* Текст заглавными буквами */
+    letter-spacing: 1px; /* Уменьшено расстояние между буквами */
+    font-size: 18px; /* Уменьшен размер шрифта */
+    line-height: 1.5; /* Увеличен интервал между строками для лучшей читаемости */
+    word-break: break-word; /* Позволяет переносить слова на новую строку */
 }
 
 .modal-content form {
@@ -141,13 +180,14 @@ form img {
 .modal-content form button {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #009879;
-    color: #ffffff;
+    border-radius: 10px; /* Скругленные углы для кнопок */
+    background-color: #EF476F; /* Розовый фон для кнопок */
+    color: #ffffff; /* Белый цвет текста */
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
 }
 
 .modal-content form button:hover {
-    background-color: #0056b3;
+    background-color: #D43F61; /* Темно-розовый цвет при наведении */
 }

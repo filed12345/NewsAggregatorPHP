@@ -11,7 +11,11 @@ class MainPageModel
 
     public function getAllNews()
     {
-        $sql = "SELECT news.*, users.username as author_name FROM news JOIN users ON news.author_id = users.id ORDER BY news.published_at DESC";
+        $sql = "SELECT news.*, users.username as author_name 
+        FROM news 
+        LEFT JOIN users ON news.author_id = users.id 
+        ORDER BY news.published_at DESC";
+
         $stmt = $this->db->connect()->query($sql);
         return $stmt->fetchAll();
     }

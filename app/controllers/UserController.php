@@ -46,12 +46,13 @@ class UserController
                 // Запоминаем пользователя в сессии
                 $_SESSION['user'] = $existingUser;
 
-                // проверяем, является ли пользователь администратором
-                if ($existingUser['user_type'] === 'admin') {
-                    header('Location: /NewsWebSitePhp/public/admin'); // перенаправляем администратора на его страницу
-                } else {
-                    header('Location: /NewsWebSitePhp/public/news'); // перенаправляем обычного пользователя на главную страницу
-                }
+//                // проверяем, является ли пользователь администратором
+//                if ($existingUser['user_type'] === 'admin') {
+//                    header('Location: /NewsWebSitePhp/public/admin'); // перенаправляем администратора на его страницу
+//                } else {
+//                    header('Location: /NewsWebSitePhp/public/news'); // перенаправляем обычного пользователя на главную страницу
+//                }
+                header('Location: /NewsWebSitePhp/public/news'); // перенаправляем пользователя на главную страницу
                 exit;
             } else {
                 $error = 'Неверный адрес электронной почты или пароль'; // Записываем сообщение об ошибке

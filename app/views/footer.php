@@ -1,12 +1,14 @@
-<!-- views/footer.php -->
 <style>
     .footer {
         width: 100%;
         padding: 20px;
         text-align: center;
-        background-color: #f8f9fa;
-        border-top: 1px solid #e5e5e5;
-        color: #838383;
+        background-color: #9AACA4; /* Фон, совпадающий с фоном главной страницы */
+        color: #ffffff; /* Белый текст */
+        font-family: Arial, sans-serif;
+        font-weight: bold; /* Жирный шрифт */
+        letter-spacing: 1px; /* Расстояние между буквами */
+        box-sizing: border-box;
     }
 </style>
 
@@ -18,5 +20,3 @@
         <p>&copy;NewsWebSite. 2023 All rights reserved</p>
     </div>
 </footer>
-
-

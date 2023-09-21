@@ -1,91 +1,92 @@
 html, body {
-    display: flex; /* Используем Flexbox для размещения элементов */
-    flex-direction: column; /* Компонуем элементы по вертикали */
-    min-height: 100vh; /* Устанавливаем минимальную высоту во весь экран */
-    background-color: #f5f5f5; /* Задаем фоновый цвет */
-    font-family: Arial, sans-serif; /* Задаем шрифт */
-    padding: 0; /* Сбрасываем отступы */
-    margin: 0; /* Сбрасываем отступы */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-    width: 100%; /* Занимаем всю доступную ширину */
-    max-width: 100vw; /* Ограничиваем ширину не более ширины окна просмотра */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #9AACA4; /* Светло-зеленый фон */
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .container {
-    width: 100%; /* Занимаем всю доступную ширину */
-    margin: auto; /* Выравниваем по центру горизонтально */
-    padding-top: 2rem; /* Добавляем отступ сверху */
-    flex: 1 0 auto; /* Занимаем доступное пространство по вертикали */
-    overflow-y: auto; /* Включаем вертикальную прокрутку при необходимости */
+    width: 100%;
+    margin: auto;
+    padding-top: 2rem;
+    flex: 1 0 auto;
+    overflow-y: auto;
 }
 
 .title {
-    text-align: center; /* Выравниваем текст по центру */
-    color: #333; /* Задаем цвет текста */
+    text-align: center;
+    color: #0E3B43; /* Темно-зеленый цвет для заголовка */
+    font-size: 2em; /* Увеличенный размер шрифта для заголовка */
 }
 
 .create-btn {
-    display: block; /* Отображаем как блочный элемент */
-    width: 200px; /* Задаем ширину */
-    height: 50px; /* Задаем высоту */
-    margin: 20px auto; /* Выравниваем по центру горизонтально и добавляем отступы */
-    background-color: #009879; /* Задаем цвет фона */
-    text-align: center; /* Выравниваем текст по центру */
-    border-radius: 5px; /* Задаем скругление углов */
-    color: white; /* Задаем цвет текста */
-    font-weight: bold; /* Задаем жирное начертание текста */
-    line-height: 50px; /* Задаем высоту строки текста */
-    text-decoration: none; /* Удаляем подчеркивание ссылки */
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: #EF476F; /* Розовый цвет для кнопки */
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Анимация при наведении */
+}
+
+.create-btn:hover {
+    background-color: #D43F61; /* Темный розовый цвет для кнопки при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
 }
 
 .news-table {
-    width: 100%; /* Занимаем всю доступную ширину */
-    border-collapse: collapse; /* Сливаем границы ячеек */
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .news-table thead th {
-    background-color: #009879; /* Задаем цвет фона заголовков таблицы */
-    color: white; /* Задаем цвет текста заголовков таблицы */
-    padding: 10px; /* Добавляем отступы вокруг содержимого ячеек */
-    text-align: left; /* Выравниваем текст по левому краю */
+    background-color: #0E3B43; /* Темно-зеленый цвет для заголовков таблицы */
+    color: white;
+    padding: 10px;
+    text-align: left;
 }
 
 .news-table tbody td {
-    border-bottom: 1px solid #dddddd; /* Добавляем нижнюю границу ячеек таблицы */
-    padding: 10px; /* Добавляем отступы вокруг содержимого ячеек */
+    border-bottom: 1px solid #dddddd;
+    padding: 10px;
 }
 
 .edit-btn,
 .delete-btn {
-    color: #009879; /* Задаем цвет текста кнопок редактирования и удаления */
-    text-decoration: none; /* Удаляем подчеркивание ссылок */
+    text-decoration: none;
+    border-radius: 5px; /* Скругленные углы */
+    padding: 5px 10px; /* Отступы вокруг текста */
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+.edit-btn {
+    color: #0E3B43; /* Темно-зеленый цвет для кнопки редактирования */
+}
+
+.edit-btn:hover {
+    background-color: #D3E0DC; /* Светлый фон для кнопки редактирования при наведении */
 }
 
 .delete-btn {
-    color: #ff0000; /* Задаем цвет текста кнопки удаления */
+    color: #EF476F; /* Розовый цвет для кнопки удаления */
 }
 
-/* Адаптивные стили для мобильных устройств */
-@media screen and (max-width: 600px) {
-    .container {
-        padding-top: 1rem; /* Уменьшаем отступ сверху на мобильных устройствах */
-    }
-
-    .create-btn {
-        width: 150px; /* Уменьшаем ширину кнопки создания на мобильных устройствах */
-        height: 40px; /* Уменьшаем высоту кнопки создания на мобильных устройствах */
-        margin: 10px auto; /* Выравниваем по центру горизонтально и добавляем отступы */
-        line-height: 40px; /* Задаем высоту строки текста */
-    }
-
-    .news-table thead th,
-    .news-table tbody td {
-        padding: 8px; /* Уменьшаем отступы вокруг содержимого ячеек на мобильных устройствах */
-    }
+.delete-btn:hover {
+    background-color: #FFD3D9; /* Светлый розовый фон для кнопки удаления при наведении */
 }
 
 /* Стили для модального окна и маски */
-
 .modal-mask {
     position: fixed;
     z-index: 9998;
@@ -100,22 +101,31 @@ html, body {
 }
 
 .modal-wrapper {
-    width: 600px;
+    width: 80%; /* Увеличена ширина модального окна до 80% от ширины экрана */
+    max-width: 600px; /* Ограничена максимальная ширина модального окна */
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-    transition: all .3s ease;
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Тень вокруг блока */
+    transition: all .3s ease; /* Плавный переход при наведении */
     font-family: Arial, sans-serif;
-}
-
-.modal-content {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Добавлен отступ внутри модального окна */
 }
 
 .modal-content h2 {
     margin-bottom: 20px;
+    color: #0E3B43; /* Темно-зеленый цвет текста */
+    text-transform: uppercase; /* Текст заглавными буквами */
+    letter-spacing: 1px; /* Уменьшено расстояние между буквами */
+    font-size: 18px; /* Уменьшен размер шрифта */
+    line-height: 1.5; /* Увеличен интервал между строками для лучшей читаемости */
+    word-break: break-word; /* Позволяет переносить слова на новую строку */
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #0E3B43; /* Темно-зеленый цвет текста */
+    text-transform: uppercase; /* Текст заглавными буквами */
+    letter-spacing: 2px; /* Расстояние между буквами */
 }
 
 .modal-content form {
@@ -126,15 +136,15 @@ html, body {
 .modal-content form button {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #009879;
-    color: #ffffff;
+    border-radius: 10px; /* Скругленные углы для кнопок */
+    background-color: #EF476F; /* Розовый фон для кнопок */
+    color: #ffffff; /* Белый цвет текста */
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
 }
 
 .modal-content form button:hover {
-    background-color: #0056b3;
+    background-color: #D43F61; /* Темно-розовый цвет при наведении */
 }
-
 

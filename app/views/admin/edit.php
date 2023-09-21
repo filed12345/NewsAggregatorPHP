@@ -19,7 +19,7 @@
                 <input type="text" name="author" value="<?= $news['author'] ?>" disabled>
 
                 <label>Body:</label>
-                <textarea name="body"><?= $news['body'] ?></textarea>
+                <textarea name="body" ><?= $news['body'] ?></textarea>
                 <?php if (isset($errors['body'])) echo "<p class='error-message'>{$errors['body']}</p>"; ?>
 
                 <!-- Comments Section -->

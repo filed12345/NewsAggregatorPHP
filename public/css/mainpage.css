@@ -1,43 +1,55 @@
+/* mainpage.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #9AACA4; /* Светло-зеленый фон */
 }
 
 h1 {
     text-align: center;
     padding: 20px 0;
-    color: #333;
+    color: #0E3B43; /* Темно-зеленый текст */
+    text-transform: uppercase; /* Текст заглавными буквами */
+    letter-spacing: 2px; /* Расстояние между буквами */
 }
 
 .news-item {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    background-color: #ffffff; /* Белый фон для блока новости */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Тень вокруг блока новости */
+    word-break: break-word;
+    border-radius: 15px; /* Скругленные углы */
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+.news-item:hover {
+    transform: scale(1.01); /* Увеличение блока при наведении */
 }
 
 .news-item h2 {
-    color: #444;
+    color: #0E3B43; /* Темно-зеленый цвет для заголовка новости */
 }
 
 .news-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    object-fit: cover; /* Покрытие всей области картинкой без искажений */
+    border-radius: 15px; /* Скругленные углы для изображения */
 }
 
 .news-item p {
-    color: #666;
-    line-height: 1.6;
+    color: #333333; /* Темный цвет для текста абзаца */
 }
 
 .comment {
-    background-color: #eee;
+    background-color: #EFEFEF; /* Светлый фон для комментариев */
     padding: 10px;
-    margin: 5px 0; /* Изменено с 10px на 5px */
-    border-radius: 5px;
+    margin: 5px 0;
+    border-radius: 10px; /* Скругленные углы для блока комментария */
 }
 
 form {
@@ -45,20 +57,22 @@ form {
 }
 
 form textarea {
-    width: 100%;
+    width: calc(100% - 22px); /* Уменьшена ширина с учетом отступов */
     padding: 10px;
-    margin-bottom: 10px;
+    border-radius: 10px; /* Скругленные углы для текстового поля */
+    border: 1px solid #CCC; /* Граница вокруг текстового поля */
 }
 
 form input[type="submit"] {
     padding: 10px 20px;
     border: none;
-    background-color: #333;
+    background-color: #EF476F; /* Розовый фон для кнопки */
     color: white;
     cursor: pointer;
+    border-radius: 10px; /* Скругленные углы для кнопки */
+    transition: background-color 0.3s; /* Плавный переход цвета фона кнопки при наведении */
 }
-.news-item .news-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+
+form input[type="submit"]:hover {
+    background-color: #D43F61; /* Темный розовый фон для кнопки при наведении */
 }

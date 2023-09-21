@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +7,7 @@
 html, body {
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #9AACA4; /* Светло-зеленый фон */
     display: flex;
     flex-direction: column;
 }
@@ -26,8 +25,14 @@ html, body {
     width: 100%;
     max-width: 400px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    background-color: #ffffff;
+    background-color: #ffffff; /* Белый фон для контейнера регистрации */
     padding: 20px;
+    border-radius: 15px; /* Скругленные углы */
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+.login-container:hover {
+    transform: scale(1.01); /* Увеличение контейнера при наведении */
 }
 
 .login-form {
@@ -43,22 +48,30 @@ html, body {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #0E3B43; /* Темно-зеленый цвет рамки */
     width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Анимация для границы и тени */
+}
+
+.form-group input:focus {
+    border-color: #EF476F; /* Розовый цвет рамки при фокусе */
+    box-shadow: 0px 0px 5px 0px #EF476F; /* Розовая тень при фокусе */
 }
 
 .submit-btn {
     padding: 10px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: #EF476F; /* Розовый фон для кнопки */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Скругленные углы для кнопки */
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Анимация при наведении */
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #D43F61; /* Темный розовый фон для кнопки при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
 }
 
 .register-link {
@@ -67,14 +80,11 @@ html, body {
 }
 
 .register-link a {
-    color: #007BFF;
+    color: #0E3B43; /* Темно-зеленый цвет для ссылки */
     text-decoration: none;
 }
 
 .register-link a:hover {
     text-decoration: underline;
+    color: #EF476F; /* Розовый цвет для ссылки при наведении */
 }
-
-
-
-
